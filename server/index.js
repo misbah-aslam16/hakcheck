@@ -10,7 +10,7 @@ const app = express();
 app.use(cors({
 		origin: ['http://localhost:5174',
 			 'http://localhost:5173',
-			'https://e-commerce-website-eosin-two.vercel.app',
+			'https://hakcheck-ktmc.vercel.app',
 			
 			],
 		methods: ['GET', 'PUT', 'POST', 'DELETE'],
