@@ -8,9 +8,16 @@ const taskRoutes = require('./routes/taskRoutes');
 dotenv.config();
 const app = express();
 app.use(cors({
-  origin: 'https://hakcheck-ktmc.vercel.app',
-}  
-));
+		origin: ['http://localhost:5174',
+			 'http://localhost:5173',
+			'https://e-commerce-website-eosin-two.vercel.app',
+			
+			],
+		methods: ['GET', 'PUT', 'POST', 'DELETE'],
+		credentials: true,
+		allowedHeaders: ['Content-Type', 'Authorization'],
+	}),
+);
 app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
